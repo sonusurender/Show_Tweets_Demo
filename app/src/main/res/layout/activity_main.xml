@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.twitter_show_tweets_demo.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tweet_view"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <!-- TweetView with Dark Style theme, here pass any Tweet Id in
+         place of tw__tweet_id  -->
+        <com.twitter.sdk.android.tweetui.TweetView
+            android:id="@+id/tweet_view"
+            style="@style/tw__TweetDarkWithActionsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tw__tweet_id="954329648879587328" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/compact_tweet_view"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <!-- CompactTweetView with Light Style theme, here pass any
+        Tweet Id in place of tw__tweet_id  -->
+        <com.twitter.sdk.android.tweetui.CompactTweetView
+            android:id="@+id/compact_tweet_view"
+            style="@style/tw__TweetLightWithActionsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tw__tweet_id="953599133318819843" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/tweet_view_runtime"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <!--  Here the runtime Tweet will be shown and will be added in runtime -->
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
